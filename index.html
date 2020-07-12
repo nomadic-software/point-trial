@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="https://nomadic.software">
+    <title>Welcome</title>
+    <meta name="author" content="Nomadic Software">
+    <meta name="description" content="Welcome Page">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Preload logo and fonts-->
+    <link rel="preload" href="https://www.theoystershell.co.uk/wp-content/uploads/2019/08/OysterShell-LogoSquare1-Trans-ONLINE-e1566331900866.png" as="image">
+    <link rel="preload" href="//cdn.shopify.com/s/files/1/0266/3763/1535/t/1/assets/product-sans-black.ttf?v=15634183040546789914" as="font" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.7.0/Tween.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+
+    <style>
+      @font-face {
+			  font-family: productSans;
+			  src: url('//cdn.shopify.com/s/files/1/0266/3763/1535/t/1/assets/product-sans-black.ttf?v=15634183040546789914');
+			}
+
+      body {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        background-color: #f7f5e3;
+      }
+
+      h1 {
+        font-family: 'Lobster', cursive;
+        text-shadow: 0 2px 1px #00515d;
+      }
+
+      .slider {
+        height: 50vh;
+        width: 100%;
+        position: fixed;
+        background-color: #7ea7ad;
+      }
+      #top-slider {
+        top: 0;
+        z-index: 100;
+      }
+      #bottom-slider {
+        bottom: 0;
+        z-index: 99;
+      }
+      #sliderLogo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 101;
+      }
+
+      .banner {
+        background-color: #7ea7ad;
+        padding-bottom: 3rem;
+        padding-top: 3.5rem;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border-top: 8px solid white;
+        border-bottom: 2rem solid white;
+        box-shadow: 0 -1px 40px #0000002e;
+      }
+      .banner-logo {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .app-section {
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 2px 6px #00000018;
+        border-bottom: 1px solid #bfbfbf;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+      }
+      .app-icon-box {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.3rem;
+        background-color: #b4d5da;
+        display: flex;
+        flex: 0 0 auto;
+      }
+      .app-icon {
+        margin: auto;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 0 2px 3px #00000087;
+      }
+      .app-text {
+        padding-right: 2rem;
+        padding-left: 1rem;
+        margin: auto;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .point-text {
+        text-align: center;
+        display: block;
+        font-family: productSans;
+        text-decoration: none;
+        color: #000000a6;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="top-slider" class="slider">
+      <img id="sliderLogo" src="https://www.theoystershell.co.uk/wp-content/uploads/2019/08/OysterShell-LogoSquare1-Trans-ONLINE-e1566331900866.png">
+    </div>
+    <div id="bottom-slider" class="slider"></div>
+
+    <div>
+      <div class="banner">
+        <img class="banner-logo" src="https://www.theoystershell.co.uk/wp-content/uploads/2019/08/OysterShell-LogoSquare1-Trans-ONLINE-e1566331900866.png">
+        <h1 style="margin: 0; color: white;">Weclome to our shop</h1>
+      </div>
+
+      <div style="margin: 1rem; margin-top: 3rem;">
+        <a class="point-text" href="https://contactlesspoint.com/">
+          powered by .point
+        </a>
+        <div class="app-section">
+          <div class="app-icon-box">
+            <i class="fa fa-cutlery app-icon" aria-hidden="true"></i>
+          </div>
+          <div class="app-text">Order Now</div>
+        </div>
+        <div class="app-section">
+          <div class="app-icon-box">
+            <i class="fa fa-tripadvisor app-icon" aria-hidden="true"></i>
+          </div>
+          <div class="app-text">Rate Us</div>
+        </div>
+        <div class="app-section">
+          <div class="app-icon-box">
+            <i class="fa fa-check-square-o app-icon" aria-hidden="true"></i>
+          </div>
+          <div class="app-text">Sign-in, Stay Safe</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('sliderLogo').onload = function () {
+
+        // Begin animation loop
+        requestAnimationFrame(draw);
+
+        setTimeout(() => {
+          document.getElementById('top-slider').style.boxShadow = "0 0 14px #0000001f";
+          document.getElementById('bottom-slider').style.boxShadow = "0 0 14px #0000001f";
+
+          const EASING_PROPERTY = TWEEN.Easing.Quartic.InOut;
+          const imageHeight = document.getElementById('sliderLogo').clientHeight*0.5;
+          const topPos = { value: 0 };
+          const slideUpTween = new TWEEN.Tween(topPos)
+          	.to({ value: -(document.getElementById('top-slider').clientHeight+imageHeight) }, 1000)
+          	.easing(EASING_PROPERTY) // Use an easing function to make the animation smooth.
+          	.onUpdate(() => {
+          		// Called after tween.js updates 'coords'.
+          		// Move 'box' to the position described by 'coords' with a CSS translation.
+              document.getElementById('top-slider').style.top = topPos.value + "px";
+          	})
+            .onComplete(() => {
+              document.getElementById('top-slider').style.display = "none";
+            })
+          	.start()
+          const bottomPos = { value: 0 };
+          const slideDownTween = new TWEEN.Tween(bottomPos)
+          	.to({ value: -(document.getElementById('bottom-slider').clientHeight+imageHeight) }, 1000)
+          	.easing(EASING_PROPERTY) // Use an easing function to make the animation smooth.
+          	.onUpdate(() => {
+          		// Called after tween.js updates 'coords'.
+          		// Move 'box' to the position described by 'coords' with a CSS translation.
+              document.getElementById('bottom-slider').style.bottom = bottomPos.value + "px";
+          	})
+            .onComplete(() => {
+              document.getElementById('bottom-slider').style.display = "none";
+            })
+          	.start()
+        }, 400);
+      };
+
+      function draw (time) {
+				requestAnimationFrame(draw);
+				TWEEN.update(time);
+			}
+    </script>
+
+  </body>
+
+</html>
