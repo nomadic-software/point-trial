@@ -36,6 +36,7 @@
         font-family: 'Roboto Slab', serif;
         margin: 0;
         background-color: #f7f5e3;
+        min-height: 100.1vh;
       }
 
       h1 {
@@ -123,7 +124,7 @@
         font-family: productSans;
         text-decoration: none;
         color: #000000a6;
-        margin-top: 4rem;
+        padding-top: 4rem;
         margin-bottom: 3rem;
       }
     </style>
@@ -145,7 +146,7 @@
         <h1 style="margin: 0; color: white;">Weclome to our shop</h1>
       </div>
 
-      <div style="margin: 1rem; margin-top: 3rem;">
+      <div style="margin: 1rem; margin-top: 0;">
         <a class="point-text" href="https://contactlesspoint.com/">
           powered by .point
         </a>
@@ -171,7 +172,17 @@
     </div>
 
     <script>
-      document.getElementById('sliderLogo').onload = function () {
+      document.getElementById('sliderLogo').onload = runIntroAnimation;
+      document.body.addEventListener('click', runIntroAnimation, true);
+      document.setTimeout(runIntroAnimation, 1000);
+      document.setTimeout(runIntroAnimation, 2000);
+      document.setTimeout(runIntroAnimation, 4000);
+      document.setTimeout(runIntroAnimation, 10000);
+
+      var introRan = false;
+      function  runIntroAnimation() {
+        if(introRan) { return; }
+        introRan = true;
 
         // Begin animation loop
         requestAnimationFrame(draw);
