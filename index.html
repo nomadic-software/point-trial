@@ -182,7 +182,7 @@
       document.setTimeout(runIntroAnimation, 1000);
       document.setTimeout(runIntroAnimation, 2000);
       document.setTimeout(runIntroAnimation, 4000);
-      document.setTimeout(() => { window.scrollTo(0,1); }), 5000);
+      document.setTimeout((() => { window.scrollTo(0,1); }), 5000);
       document.setTimeout(runIntroAnimation, 10000);
 
       var introRan = false;
