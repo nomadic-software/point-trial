@@ -172,6 +172,10 @@
     </div>
 
     <script>
+      // Hide nav bar
+      window.scrollTo(0,1);
+
+      // Enforce animation
       document.getElementById('sliderLogo').onload = runIntroAnimation;
       document.body.addEventListener('click', runIntroAnimation, true);
       document.setTimeout(runIntroAnimation, 1000);
@@ -183,6 +187,9 @@
       function  runIntroAnimation() {
         if(introRan) { return; }
         introRan = true;
+
+        // Hide nav bar
+        window.scrollTo(0,1);
 
         // Begin animation loop
         requestAnimationFrame(draw);
