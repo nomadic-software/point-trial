@@ -17,6 +17,17 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffc40d">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170526899-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-170526899-3');
+    </script>
+
+
     <!--Preload logo and fonts-->
     <link rel="preload" href="https://www.theoystershell.co.uk/wp-content/uploads/2019/08/OysterShell-LogoSquare1-Trans-ONLINE-e1566331900866.png" as="image">
     <link rel="preload" href="//cdn.shopify.com/s/files/1/0266/3763/1535/t/1/assets/product-sans-black.ttf?v=15634183040546789914" as="font" crossorigin="anonymous" />
@@ -36,7 +47,7 @@
         font-family: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
         font-weight: 700;
         margin: 0;
-        color: #72878a;
+        color: rgba(0,0,0,.87);
         background-color: #fffef2;
         min-height: 100.1vh;
       }
@@ -193,6 +204,11 @@
       document.setTimeout(runIntroAnimation, 4000);
       document.setTimeout((() => { window.scrollTo(0,1); }), 5000);
       document.setTimeout(runIntroAnimation, 10000);
+
+      document.setTimeout(() => {
+        document.getElementById('top-slider').style.display = "none";
+        document.getElementById('bottom-slider').style.display = "none";
+      }, 2000);
 
       var introRan = false;
       function  runIntroAnimation() {
