@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.7.0/Tween.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
     <style>
       @font-face {
@@ -33,9 +33,11 @@
 			}
 
       body {
-        font-family: 'Lobster', serif;
+        font-family: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
+        font-weight: 700;
         margin: 0;
-        background-color: #f8f8f5;
+        color: #72878a;
+        background-color: #fffef2;
         min-height: 100.1vh;
       }
 
@@ -74,8 +76,8 @@
         position: fixed;
         width: 100%;
         bottom: 0;
-        border-top: 8px solid white;
-        border-bottom: 2rem solid white;
+        /* border-top: 8px solid white; */
+        /* border-bottom: 2rem solid white; */
         box-shadow: 0 -1px 40px #0000002e;
       }
       .banner-logo {
@@ -95,12 +97,14 @@
         display: flex;
         flex-direction: row;
         margin-top: 1rem;
+        text-decoration: none;
+        color: inherit;
       }
       .app-icon-box {
         width: 4rem;
         height: 4rem;
         border-radius: 0.3rem;
-        background-color: #b4d5da;
+        background-color: #7ea7ad;
         display: flex;
         flex: 0 0 auto;
       }
@@ -150,24 +154,30 @@
         <a class="point-text" href="https://contactlesspoint.com/">
           powered by .point
         </a>
-        <div class="app-section">
+        <a class="app-section" href="https://menus.preoday.com/the-oyster-shell">
           <div class="app-icon-box">
             <i class="fa fa-cutlery app-icon" aria-hidden="true"></i>
           </div>
-          <div class="app-text">Order Now</div>
-        </div>
-        <div class="app-section">
+          <div class="app-text">ORDER NOW</div>
+        </a>
+        <a class="app-section" href="http://search.google.com/local/writereview?placeid=ChIJU_7QKgaBcUgRHLPJXHyvUOw">
           <div class="app-icon-box">
-            <i class="fa fa-tripadvisor app-icon" aria-hidden="true"></i>
+            <i class="fa fa-google app-icon" aria-hidden="true"></i>
           </div>
-          <div class="app-text">Rate Us</div>
-        </div>
-        <div class="app-section">
+          <div class="app-text">RATE US</div>
+        </a>
+        <a class="app-section" href="https://www.instagram.com/oystershellbath">
           <div class="app-icon-box">
-            <i class="fa fa-check-square-o app-icon" aria-hidden="true"></i>
+            <i class="fa fa-instagram app-icon" aria-hidden="true"></i>
           </div>
-          <div class="app-text">Sign-in, Stay Safe</div>
-        </div>
+          <div class="app-text">FOLLOW US</div>
+        </a>
+        <a class="app-section" href="maps:q=atm">
+          <div class="app-icon-box">
+            <i class="fa fa-gbp app-icon" aria-hidden="true"></i>
+          </div>
+          <div class="app-text">NEAREST ATM</div>
+        </a>
       </div>
     </div>
 
