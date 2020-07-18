@@ -27,6 +27,21 @@
       gtag('config', 'UA-170526899-3');
     </script>
 
+    <script>
+    /**
+    * Function that captures a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var captureOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
+
 
     <!--Preload logo and fonts-->
     <link rel="preload" href="https://www.theoystershell.co.uk/wp-content/uploads/2019/08/OysterShell-LogoSquare1-Trans-ONLINE-e1566331900866.png" as="image">
@@ -165,23 +180,23 @@
         <a class="point-text" href="https://contactlesspoint.com/">
           powered by .point
         </a>
-        <a class="app-section" href="https://menus.preoday.com/the-oyster-shell">
+        <a onclick="captureOutboundLink('preoday'); return false;" class="app-section" href="https://menus.preoday.com/the-oyster-shell">
           <div class="app-icon-box">
             <i class="fa fa-cutlery app-icon" aria-hidden="true"></i>
           </div>
           <div class="app-text">ORDER NOW</div>
         </a>
-        <a class="app-section" href="http://search.google.com/local/writereview?placeid=ChIJU_7QKgaBcUgRHLPJXHyvUOw">
-          <div class="app-icon-box">
-            <i class="fa fa-google app-icon" aria-hidden="true"></i>
-          </div>
-          <div class="app-text">RATE US</div>
-        </a>
-        <a class="app-section" href="https://www.instagram.com/oystershellbath">
+        <a onclick="captureOutboundLink('instagram'); return false;" class="app-section" href="https://www.instagram.com/oystershellbath">
           <div class="app-icon-box">
             <i class="fa fa-instagram app-icon" aria-hidden="true"></i>
           </div>
           <div class="app-text">FOLLOW US</div>
+        </a>
+        <a onclick="captureOutboundLink('rate us'); return false;" class="app-section" href="http://search.google.com/local/writereview?placeid=ChIJU_7QKgaBcUgRHLPJXHyvUOw">
+          <div class="app-icon-box">
+            <i class="fa fa-google app-icon" aria-hidden="true"></i>
+          </div>
+          <div class="app-text">RATE US</div>
         </a>
         <!--<a class="app-section" href="google.navigation:q=McDonald's">
           <div class="app-icon-box">
@@ -199,16 +214,16 @@
       // Enforce animation
       document.getElementById('sliderLogo').onload = runIntroAnimation;
       document.body.addEventListener('click', runIntroAnimation, true);
-      document.setTimeout(runIntroAnimation, 1000);
-      document.setTimeout(runIntroAnimation, 2000);
-      document.setTimeout(runIntroAnimation, 4000);
-      document.setTimeout((() => { window.scrollTo(0,1); }), 5000);
-      document.setTimeout(runIntroAnimation, 10000);
+      window.setTimeout(runIntroAnimation, 1000);
+      //document.setTimeout(runIntroAnimation, 2000);
+      //document.setTimeout(runIntroAnimation, 4000);
+      //document.setTimeout((() => { window.scrollTo(0,1); }), 5000);
+      //document.setTimeout(runIntroAnimation, 10000);
 
-      document.setTimeout(() => {
+      window.setTimeout(() => {
         document.getElementById('top-slider').style.display = "none";
         document.getElementById('bottom-slider').style.display = "none";
-      }, 2000);
+      }, 2500);
 
       var introRan = false;
       function  runIntroAnimation() {
